@@ -1,0 +1,34 @@
+<h2>
+  Diretiva *ngIf 
+</h2>
+
+<div *ngIf="cursos.length > 0">
+  Lista de cursos aqui. 
+</div>
+
+<div *ngIf="cursos.length == 0">
+  Não existem cursos disponíveis.
+</div>
+
+<div *ngIf="mostrarCursos">
+  Lista de cursos aqui. 
+</div>
+
+<div *ngIf="!mostrarCursos">
+  Não existem cursos disponíveis.
+</div>
+<br />
+
+<button class="btn btn-primary" (click)="onMostrarCursos()">
+  Mostrar/Esconder cursos
+</button>
+
+<h2>Hidden como alternativa</h2>
+
+<div [hidden]="!mostrarCursos">
+  Lista de cursos aqui. 
+</div>
+
+<div [hidden]="mostrarCursos">
+  Não existem cursos disponíveis.
+</div>
